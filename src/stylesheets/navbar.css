@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-right: 2rem;
+  position: relative;
+  top: 0.5rem;
+}
