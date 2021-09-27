@@ -1,12 +1,22 @@
-import React from 'react'
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import '../stylesheets/navbar.css';
 
 const Navbar = () => {
   const links = [
-    {id: 1, path: '/', text: 'BOOKS'}, {id: 2, path: '/categories', text: 'CATEGORIES'}
-  ]
+    {
+      id: 1,
+      path: '/',
+      text: 'BOOKS',
+    },
+    {
+      id: 2,
+      path: '/categories',
+      text: 'CATEGORIES',
+    },
+  ];
+
   return (
     <nav>
       <div>
@@ -21,6 +31,6 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-}
- 
+};
+
 export default Navbar;
