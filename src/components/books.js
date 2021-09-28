@@ -12,7 +12,7 @@ const Books = () => {
   const [bookInput, setBookInput] = useState({id: '', title: '', author: ''})
   const dispatch = useDispatch()
 
-  const books = useSelector((state) => state.booksReducer)
+  const books = useSelector((state) => state.books)
 
   const handleRemove = (id) => {
     dispatch(removeBook(id))
