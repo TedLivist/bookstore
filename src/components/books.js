@@ -19,7 +19,7 @@ const Books = () => {
           <li key={book.id}>
             {book.id}
             {book.title}
-            {book.author}
+            {book.category}
             <button type="button" onClick={() => handleRemove(book.id)}>Remove Book</button>
           </li>
         ))}

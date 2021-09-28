@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# local linters
+.babelrc
+.eslintrc.json
+.stylintrc.json
+
 # testing
 /coverage
 
