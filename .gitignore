@@ -6,9 +6,8 @@
 .pnp.js
 
 # local linters
-.babelrc
 .eslintrc.json
-.stylintrc.json
+.stylelintrc.json
 
 # testing
 /coverage

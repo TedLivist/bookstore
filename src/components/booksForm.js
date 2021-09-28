@@ -8,7 +8,7 @@ import { addBook } from '../redux/books/books';
 const BookForm = () => {
   const dispatch = useDispatch();
 
-  const [bookInput, setBookInput] = useState({ id: '', title: '', category: '' });
+  const [bookInput, setBookInput] = useState({ item_id: '', title: '', category: '' });
   const [error, setError] = useState('');
 
   const onChange = (e) => {
@@ -20,7 +20,7 @@ const BookForm = () => {
 
     const newBook = { ...bookInput };
     if (newBook.title.trim() && newBook.category !== '') {
-      newBook.id = uuidv4();
+      newBook.item_id = uuidv4();
       dispatch(addBook(newBook));
       setBookInput({ title: '', category: '' });
       setError('');
@@ -32,9 +32,8 @@ const BookForm = () => {
   return (
     <form onSubmit={onSubmit}>
       <input type="text" required name="title" onChange={onChange} value={bookInput.title} placeholder="Title" />
-      {/* <input type="text" required name="category" onChange={onChange} value={bookInput.category} placeholder="Category" /> */}
       <select name="category" onChange={onChange} value={bookInput.category}>
-        <option>--Select from options below--</option>
+        <option>--Select category--</option>
         <option value="Grapefruit">Grapefruit</option>
         <option value="Lime">Lime</option>
       </select>
