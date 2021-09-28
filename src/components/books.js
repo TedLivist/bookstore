@@ -1,20 +1,15 @@
-/* eslint-disable */
-
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const Books = () => {
-  // const initialBooks = [{id: 1, title: 'Book One - ', author: 'Me '}, {id: 2, title: 'Book Two - ', author: 'Em '}]
+  const dispatch = useDispatch();
 
-  // const [books, setBooks] = useState(initialBooks)
-  const dispatch = useDispatch()
-
-  const books = useSelector((state) => state.books)
+  const books = useSelector((state) => state.books);
 
   const handleRemove = (id) => {
-    dispatch(removeBook(id))
-  }
+    dispatch(removeBook(id));
+  };
 
   return (
     <div>
@@ -31,6 +26,6 @@ const Books = () => {
       </ul>
     </div>
   );
-}
+};
 
 export default Books;

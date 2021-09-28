@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
@@ -7,27 +5,27 @@ const initialState = [];
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
-  payload
-})
+  payload,
+});
 
 export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
-  id: payload
-})
+  id: payload,
+});
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [
         action.payload,
-        ...state
-      ]
+        ...state,
+      ];
     case REMOVE_BOOK:
-      return state.filter(book => book.id !== action.id)
-    
+      return state.filter((book) => book.id !== action.id);
+
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default reducer;
