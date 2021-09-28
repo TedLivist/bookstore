@@ -7,6 +7,7 @@ import Books from './components/books';
 import Categories from './components/categories';
 import Navbar from './components/navbar';
 import store from './redux/configureStore';
+import BookForm from './components/booksForm';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Books />
+          <BookForm />
         </Route>
         <Route path="/categories">
           <Categories />
