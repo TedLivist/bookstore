@@ -19,8 +19,8 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [
-        ...state,
-        action.payload
+        action.payload,
+        ...state
       ]
     case REMOVE_BOOK:
       return state.filter(book => book.id !== action.id)

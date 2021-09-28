@@ -9,7 +9,8 @@ const BookForm = () => {
   const dispatch = useDispatch()
 
   const [bookInput, setBookInput] = useState({id: '', title: '', author: ''})
-  
+  const [error, setError] = useState('')
+
   const onChange = (e) => {
     setBookInput({...bookInput, [e.target.name]: e.target.value})
   }
@@ -18,14 +19,21 @@ const BookForm = () => {
     e.preventDefault()
 
     const newBook = {...bookInput}
-    newBook.id = uuidv4()
-    dispatch(addBook(newBook)) 
+    if (newBook.title.trim() && newBook.author.trim()) {
+      newBook.id = uuidv4()
+      dispatch(addBook(newBook))
+      setBookInput({title: '', author: ''})
+      setError('')
+    } else {
+      setError('Error: Missing title or author')
+    }
   }
 
   return (
     <form onSubmit={onSubmit}>
-      <input type="text" name='title' onChange={onChange} value={bookInput.title} placeholder="Title" />
-      <input type="text" name='author' onChange={onChange} value={bookInput.author} placeholder="Author" />
+      <input type="text" required name='title' onChange={onChange} value={bookInput.title} placeholder="Title" />
+      <input type="text" required name='author' onChange={onChange} value={bookInput.author} placeholder="Author" />
+      {error.length > 4 ? <li>{error}</li> : ''}
       <button>Add Book</button>
     </form>
   );
