@@ -6,7 +6,7 @@ import { addBook } from '../redux/books/books';
 const BookForm = () => {
   const dispatch = useDispatch();
 
-  const [bookInput, setBookInput] = useState({ id: '', title: '', author: '' });
+  const [bookInput, setBookInput] = useState({ item_id: '', title: '', category: '' });
   const [error, setError] = useState('');
 
   const onChange = (e) => {
@@ -17,20 +17,24 @@ const BookForm = () => {
     e.preventDefault();
 
     const newBook = { ...bookInput };
-    if (newBook.title.trim() && newBook.author.trim()) {
-      newBook.id = uuidv4();
+    if (newBook.title.trim() && newBook.category !== '') {
+      newBook.item_id = uuidv4();
       dispatch(addBook(newBook));
-      setBookInput({ title: '', author: '' });
+      setBookInput({ title: '', category: '' });
       setError('');
     } else {
-      setError('Error: Missing title or author');
+      setError('Error: Missing title or category');
     }
   };
 
   return (
     <form onSubmit={onSubmit}>
       <input type="text" required name="title" onChange={onChange} value={bookInput.title} placeholder="Title" />
-      <input type="text" required name="author" onChange={onChange} value={bookInput.author} placeholder="Author" />
+      <select name="category" onChange={onChange} value={bookInput.category}>
+        <option>--Select category--</option>
+        <option value="Grapefruit">Grapefruit</option>
+        <option value="Lime">Lime</option>
+      </select>
       {error.length > 4 ? <li>{error}</li> : ''}
       <button type="submit">Add Book</button>
     </form>
