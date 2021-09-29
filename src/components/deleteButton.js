@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
-const Button = (props) => {
+const DeleteButton = (props) => {
   const { bookId } = props;
   const dispatch = useDispatch();
 
@@ -16,8 +16,8 @@ const Button = (props) => {
   );
 };
 
-Button.propTypes = {
+DeleteButton.propTypes = {
   bookId: PropTypes.string.isRequired,
 };
 
-export default Button;
+export default DeleteButton;
