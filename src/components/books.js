@@ -41,21 +41,20 @@
 
 import React from 'react';
 import { useSelector } from "react-redux";
-import Button from './button';
 import OneBook from './oneBook';
 
 const Books = () => {
   const books = useSelector((state) => state.books);
-  const newBooks = books.map(([item_id, value]) => {
-    const [book] = value
-    return {...book, item_id}
-  })
-  console.log(newBooks)
+  // const newBooks = books.map(([item_id, value]) => {
+  //   const [book] = value
+  //   return {...book, item_id}
+  // })
+  console.log(books)
   return (
     <div>
       <h1>Books</h1>
       <ul>
-        {newBooks.map((book) => (
+        {books.map((book) => (
           <OneBook book={book} key={book.item_id} />
         ))}
       </ul>

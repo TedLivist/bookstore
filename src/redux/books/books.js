@@ -24,17 +24,28 @@ export const addBook = (payload) => async (dispatch) => (
   })
 );
 
-export const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
-  id: payload,
-});
+export const removeBook = (id) => async (dispatch) => (
+  await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/EaEPc8EhJHK5uQBC5fqK/books/${id}`, {
+    method: 'DELETE'
+  })
+  .then((response) => response.text())
+  .then(dispatch({type: REMOVE_BOOK, id}))
+)
+// ) ({
+//   type: REMOVE_BOOK,
+//   id: payload,
+// });
 
 export const getBooks = () => async (dispatch) => (
   await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/EaEPc8EhJHK5uQBC5fqK/books')
   .then((response) => response.json())
   .then((payload) => {
     const obj = Object.entries(payload)
-    dispatch({type: GET_BOOKS, obj})
+    const books = obj.map(([item_id, value]) => {
+      const [book] = value
+      return {...book, item_id}
+    })
+    dispatch({type: GET_BOOKS, books})
   })
 )
 
@@ -46,9 +57,9 @@ const reducer = (state = initialState, action) => {
         ...state,
       ];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.id);
+      return state.filter((book) => book.item_id !== action.id);
     case GET_BOOKS:
-      return state.concat(action.obj);
+      return state.concat(action.books);
     default:
       return state;
   }
