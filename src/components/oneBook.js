@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from './button';
+import Button from './deleteButton';
 
 const OneBook = (props) => {
   const { book } = props;
