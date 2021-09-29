@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
