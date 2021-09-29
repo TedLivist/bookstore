@@ -1,5 +1,8 @@
 nav {
   display: flex;
+  color: #0893FF;
+  border-bottom: 1px solid black;
+  padding: 0 2rem;
 }
 
 .menu-items {
@@ -11,4 +14,19 @@ nav {
   margin-right: 2rem;
   position: relative;
   top: 0.5rem;
+  font-weight: bolder;
+}
+
+.menu-items li a {
+  color: gray;
+  text-decoration: none;
+}
+
+.an-class {
+  opacity: 0.5;
+}
+
+.active {
+  color: yellow;
+  opacity: 1;
 }

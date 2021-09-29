@@ -5,7 +5,7 @@ import '../stylesheets/progress-bar.css';
 
 const ProgressBar = () => {
   return (
-    <input type="range" />
+    <input type="range" className="range" />
   );
 }
  
