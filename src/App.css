@@ -1,39 +1,123 @@
-/* .App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #fafafa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.submit-btn {
+  padding: 0 2rem;
+}
+
+.del-btn {
+  margin: 1rem 0 0 2rem;
+}
+
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #0893FF;
+  border-bottom: 1px solid gray;
+  padding: 1.5rem 4rem;
 }
 
-.App-link {
-  color: #61dafb;
-} */
+.menu-items {
+  display: flex;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.menu-items li {
+  list-style: none;
+  margin-right: 2rem;
+  position: relative;
+  top: 0.7rem;
+  font-weight: bolder;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.menu-items li a {
+  color: gray;
+  text-decoration: none;
+}
+
+.an-class {
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
+}
+
+.book-container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  padding: 1rem;
+  border: 0.5px solid grey;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 8px black;
+}
+
+.book-container:first-child {
+  margin-top: 0;
+}
+
+.kanit {
+  font-family: 'Kanit', sans-serif;
+  font-size: 2.5rem;
+}
+
+.m-0 {
+ margin: 0; 
+}
+
+.right-link{
+  text-align: start;
+  margin-left: 3rem;
+}
+
+.category {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.books-ul {
+  padding: 0;
+}
+
+.center-div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.circular-div {
+  height: 3rem;
+  width: 3rem;
+  border-right: 10px solid #3D9DF3;
+  border-bottom: 10px solid #3D9DF3;
+  border-left: 10px solid #3D9DF3;
+  border-top: 10px solid #ECECEC;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.right-btn-div {
+  border-left: 2px solid #ECECEC;
+  height: 6rem;
+  padding-left: 3rem;
+  padding-top: 2rem;
+}
+
+.circular-cent span {
+  position: relative;
+  top: 0.5rem;
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }

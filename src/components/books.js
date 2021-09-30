@@ -13,8 +13,7 @@ const Books = () => {
 
   return (
     <div>
-      <h1>Books</h1>
-      <ul>
+      <ul className="books-ul">
         {books.map((book) => (
           <OneBook book={book} key={book.item_id} />
         ))}

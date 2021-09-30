@@ -1,17 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from './deleteButton';
-import ProgressBar from './progressBar';
+import DeleteButton from './deleteButton';
 
 const OneBook = (props) => {
   const { book } = props;
 
   return (
-    <div>
-      <span>{book.title}</span>
-      <span>{book.category}</span>
-      <ProgressBar />
-      <Button bookId={book.item_id} />
+    <div className="mt-4">
+      <div className="container book-container bg-white">
+        <div>
+          <div className="m-0 category text-secondary">{book.category}</div>
+          <div className="kanit m-0">{book.title}</div>
+          <DeleteButton bookId={book.item_id} />
+        </div>
+        <div className="center-div">
+          <div className="circular-cent"><span>75%</span></div>
+          <div className="circular-div"></div>
+        </div>
+        <div className="right-link">
+          <div className="right-btn-div">
+            <button disabled className="btn btn-primary btn-sm">Hahaha</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

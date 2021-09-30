@@ -28,15 +28,23 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <input type="text" required name="title" onChange={onChange} value={bookInput.title} placeholder="Title" />
-      <select name="category" onChange={onChange} value={bookInput.category}>
-        <option>--Select category--</option>
-        <option value="Grapefruit">Grapefruit</option>
-        <option value="Lime">Lime</option>
-      </select>
-      {error.length > 4 ? <li>{error}</li> : ''}
-      <button type="submit">Add Book</button>
+    <form className="container mx-4" onSubmit={onSubmit}>
+      <div class="row">
+        <div class="col">
+          <input type="text" className="form-control" required name="title" onChange={onChange} value={bookInput.title} placeholder="Title" />
+        </div>
+        <div class="col">
+          <select className="form-control form-select" name="category" onChange={onChange} value={bookInput.category}>
+            <option>--Select category--</option>
+            <option value="Grapefruit">Grapefruit</option>
+            <option value="Lime">Lime</option>
+          </select>
+        </div>
+        {error.length > 4 ? <div className="col">{error}</div> : ''}
+        <div class="col">
+          <button className="form-control btn btn-primary" type="submit">Add Book</button>
+        </div>
+      </div>
     </form>
   );
 };
