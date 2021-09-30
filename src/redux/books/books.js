@@ -45,8 +45,8 @@ export const getBooks = () => async (dispatch) => (
 );
 
 export const clearBooks = () => ({
-  type: CLEAR_BOOKS
-})
+  type: CLEAR_BOOKS,
+});
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

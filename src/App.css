@@ -14,7 +14,7 @@ body {
 
 nav {
   display: flex;
-  color: #0893FF;
+  color: #0893ff;
   border-bottom: 1px solid gray;
   padding: 1rem 4rem 1.5rem 4rem;
 }
@@ -58,10 +58,10 @@ nav {
 
 .kanit {
   font-family: 'Kanit', sans-serif;
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
-.right-link{
+.right-link {
   text-align: start;
   margin-left: 3rem;
 }
@@ -83,16 +83,16 @@ nav {
 .circular-div {
   height: 3rem;
   width: 3rem;
-  border-right: 10px solid #3D9DF3;
-  border-bottom: 10px solid #3D9DF3;
-  border-left: 10px solid #3D9DF3;
-  border-top: 10px solid #ECECEC;
+  border-right: 10px solid #3d9df3;
+  border-bottom: 10px solid #3d9df3;
+  border-left: 10px solid #3d9df3;
+  border-top: 10px solid #ececec;
   border-radius: 50%;
   margin-right: 1rem;
 }
 
 .right-btn-div {
-  border-left: 2px solid #ECECEC;
+  border-left: 2px solid #ececec;
   height: 6rem;
   padding-left: 3rem;
   padding-top: 2rem;
@@ -111,7 +111,7 @@ nav {
 .form {
   padding-bottom: 6rem;
   position: sticky;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   margin-top: 2rem;
 }
 

@@ -15,11 +15,11 @@ const OneBook = (props) => {
         </div>
         <div className="center-div">
           <div className="circular-cent"><span>75%</span></div>
-          <div className="circular-div"></div>
+          <div className="circular-div" />
         </div>
         <div className="right-link">
           <div className="right-btn-div">
-            <button disabled className="btn btn-primary btn-sm">Hahaha</button>
+            <button type="button" disabled className="btn btn-primary btn-sm">Hahaha</button>
           </div>
         </div>
       </div>

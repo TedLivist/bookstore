@@ -31,11 +31,11 @@ const BookForm = () => {
     <form className="form fixed-bottom" onSubmit={onSubmit}>
       <div className="container form-container pt-4">
         <h4>ADD BOOK</h4>
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <input type="text" className="form-control form-control-lg" required name="title" onChange={onChange} value={bookInput.title} placeholder="Title" />
           </div>
-          <div class="col">
+          <div className="col">
             <select className="form-control form-select-lg form-select" name="category" onChange={onChange} value={bookInput.category}>
               <option>--Select category--</option>
               <option value="Fiction">Fiction</option>
@@ -46,7 +46,7 @@ const BookForm = () => {
             </select>
           </div>
           {error.length > 4 ? <div className="col">{error}</div> : ''}
-          <div class="col">
+          <div className="col">
             <button className="form-control btn-lg btn btn-primary" type="submit">Add Book</button>
           </div>
         </div>
