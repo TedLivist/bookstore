@@ -16,7 +16,7 @@ nav {
   display: flex;
   color: #0893FF;
   border-bottom: 1px solid gray;
-  padding: 1.5rem 4rem;
+  padding: 1rem 4rem 1.5rem 4rem;
 }
 
 .menu-items {
@@ -53,19 +53,12 @@ nav {
   border: 0.5px solid grey;
   border-radius: 0.5rem;
   box-shadow: 3px 3px 8px black;
-}
-
-.book-container:first-child {
-  margin-top: 0;
+  width: 1000px;
 }
 
 .kanit {
   font-family: 'Kanit', sans-serif;
-  font-size: 2.5rem;
-}
-
-.m-0 {
- margin: 0; 
+  font-size: 2.0rem;
 }
 
 .right-link{
@@ -75,7 +68,7 @@ nav {
 
 .category {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .books-ul {
@@ -116,11 +109,17 @@ nav {
 /* form styling */
 
 .form {
-  background-color: yellow;
   padding-bottom: 6rem;
   position: sticky;
+  background-color: #FAFAFA;
+  margin-top: 2rem;
 }
 
 .form h4 {
   font-weight: bold;
+}
+
+.form-container {
+  width: 1000px;
+  border-top: 2px solid gray;
 }

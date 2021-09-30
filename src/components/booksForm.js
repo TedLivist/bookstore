@@ -28,8 +28,8 @@ const BookForm = () => {
   };
 
   return (
-    <form className="form fixed-bottom pt-4" onSubmit={onSubmit}>
-      <div className="container">
+    <form className="form fixed-bottom" onSubmit={onSubmit}>
+      <div className="container form-container pt-4">
         <h4>ADD BOOK</h4>
         <div class="row">
           <div class="col">
@@ -38,8 +38,11 @@ const BookForm = () => {
           <div class="col">
             <select className="form-control form-select-lg form-select" name="category" onChange={onChange} value={bookInput.category}>
               <option>--Select category--</option>
-              <option value="Grapefruit">Grapefruit</option>
-              <option value="Lime">Lime</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Classical">Classical</option>
+              <option value="Satire">Satire</option>
+              <option value="Fantasy">Fantasy</option>
             </select>
           </div>
           {error.length > 4 ? <div className="col">{error}</div> : ''}

@@ -9,8 +9,8 @@ const OneBook = (props) => {
     <div className="mt-4">
       <div className="container book-container bg-white">
         <div>
-          <div className="m-0 category text-secondary">{book.category}</div>
-          <div className="kanit m-0">{book.title}</div>
+          <div className="category text-secondary">{book.category}</div>
+          <div className="kanit">{book.title}</div>
           <DeleteButton bookId={book.item_id} />
         </div>
         <div className="center-div">
