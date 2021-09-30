@@ -8,15 +8,6 @@ body {
   background-color: #fafafa;
 }
 
-.form {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.submit-btn {
-  padding: 0 2rem;
-}
-
 .del-btn {
   margin: 1rem 0 0 2rem;
 }
@@ -119,5 +110,17 @@ nav {
   top: 0.5rem;
   padding-right: 1rem;
   font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* form styling */
+
+.form {
+  background-color: yellow;
+  padding-bottom: 6rem;
+  position: sticky;
+}
+
+.form h4 {
   font-weight: bold;
 }
