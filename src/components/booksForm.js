@@ -28,15 +28,29 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <input type="text" required name="title" onChange={onChange} value={bookInput.title} placeholder="Title" />
-      <select name="category" onChange={onChange} value={bookInput.category}>
-        <option>--Select category--</option>
-        <option value="Grapefruit">Grapefruit</option>
-        <option value="Lime">Lime</option>
-      </select>
-      {error.length > 4 ? <li>{error}</li> : ''}
-      <button type="submit">Add Book</button>
+    <form className="form fixed-bottom" onSubmit={onSubmit}>
+      <div className="container form-container pt-4">
+        <h4>ADD BOOK</h4>
+        <div className="row">
+          <div className="col">
+            <input type="text" className="form-control form-control-lg" required name="title" onChange={onChange} value={bookInput.title} placeholder="Title" />
+          </div>
+          <div className="col">
+            <select className="form-control form-select-lg form-select" name="category" onChange={onChange} value={bookInput.category}>
+              <option>--Select category--</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Classical">Classical</option>
+              <option value="Satire">Satire</option>
+              <option value="Fantasy">Fantasy</option>
+            </select>
+          </div>
+          {error.length > 4 ? <div className="col">{error}</div> : ''}
+          <div className="col">
+            <button className="form-control btn-lg btn btn-primary" type="submit">Add Book</button>
+          </div>
+        </div>
+      </div>
     </form>
   );
 };

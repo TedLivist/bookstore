@@ -12,7 +12,7 @@ const DeleteButton = (props) => {
   };
 
   return (
-    <button type="button" onClick={() => handleRemove(bookId)}>Remove</button>
+    <button type="button" className="del-btn btn btn-sm btn-outline-danger mb-2" onClick={() => handleRemove(bookId)}>Remove</button>
   );
 };
 
